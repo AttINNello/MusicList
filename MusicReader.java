@@ -6,6 +6,7 @@ import java.io.IOException;
 public class MusicReader {
  
   private BufferedReader br;
+  int lineCount = 0;
   
   public MusicReader ()
   {
@@ -57,6 +58,16 @@ public class MusicReader {
     
     String[] data = line.split(",");
     
+    if (lineCount != 0)
+    {
+      for (int i=0; i < data.length; i++)
+      {
+        data[i] = data[i].substring(1, data[i].length()-1).trim();
+      }
+    }
+    
+    lineCount++;
+      
     return data;
     
   }
