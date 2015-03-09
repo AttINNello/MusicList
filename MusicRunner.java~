@@ -26,7 +26,9 @@ public class MusicRunner
       System.out.println(Arrays.toString(data));
       
       // Let's try to create a Song object
-      Song song = new Song(data[0], data[1]);  // data[0] is the artist and data[1] is the name
+      double Score = Double.parseDouble(data[4]);
+      double Year = Double.parseDouble(data[3]);
+      Song song = new Song(data[0], data[1], (int)Year, Score, data[16]);  // data[0] is the artist and data[1] is the name
       
       count++;
       
