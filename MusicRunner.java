@@ -49,7 +49,7 @@ public class MusicRunner
     for(int i = songs.size()-1; i >=0; i--)
     {
       Song song = songs.get(i);
-      System.out.println("song"+song.name+ "artist"+song.artist);
+      System.out.println("Song: " + song.name + " | Artist: " + song.artist);
     }    
     
     
